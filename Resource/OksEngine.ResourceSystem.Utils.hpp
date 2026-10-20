@@ -7,7 +7,7 @@
 #include <OS.Assert.hpp>
 #include <OS.FileSystem.BinaryFile.hpp>
 
-#include <Resources/auto_Resources.Module.hpp>
+#include <Resource/auto_Resource.Module.hpp>
 
 #define RESOURCE__MANAGER__CREATE_LOAD_RESOURCE_REQUEST(resourcePath)							\
 	[this](const std::string& path){													\
@@ -63,6 +63,23 @@ namespace Resource {
 		const Common::Size size = file->GetSize();
 		END_PROFILE();
 		return std::vector<Common::Byte>(data, data + size);
+	}
+
+	[[nodiscard]]
+	static inline void CreateFileAndSaveContent(const std::string& resourcePath, const char* data, Common::Size size) {
+		BEGIN_PROFILE("Loading resource %s", resourcePath);
+		ASSERT_FMSG(!std::filesystem::exists(resourcePath), "File {} is existing yet.", resourcePath);
+		auto dotfile = std::make_shared<OS::BinaryFile>("D:/OksEngine/auto_ECSSystemsCallGraph.dot");
+		char* dotData = nullptr;
+		unsigned int length = 0;
+		dotfile->Create();
+		OS::BinaryFile::WriteInfo writeInfo{
+			data,
+			size
+		};
+		(*dotfile) << writeInfo;
+		dotfile->Close();
+		END_PROFILE();
 	}
 
 

@@ -1,6 +1,6 @@
 #pragma once
-#include <Resources\auto_OksEngine.ResourceSystem.hpp>
-#include <Resources/OksEngine.ResourceSystem.Utils.hpp>
+#include <Resource\auto_OksEngine.ResourceSystem.hpp>
+#include <Resource/OksEngine.ResourceSystem.Utils.hpp>
 
 #include <Common/Async/auto_OksEngine.Async.hpp>
 #include <Common/Async/OksEngine.Async.Utils.hpp>
@@ -20,7 +20,7 @@ namespace Resource
 
 			ECS2::Entity::Id entity1id,
 			const Config::Tag* config1,
-			const LuaScript* luaScript1) {
+			const Behaviour::LuaScript* luaScript1) {
 
 			const ECS2::Entity::Id entityId = CreateEntity();
 			CreateComponent<Manager::Tag>(entityId);

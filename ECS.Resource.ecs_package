@@ -9,7 +9,7 @@ Package = {
         }
     },
     Modules = {
-        { "Sources/Resource.ecs_module" }
+        { "Resource/Resource.ecs_module" }
     }
 
 }

@@ -138,7 +138,7 @@ ResourceNamespace = {
 					},
 					{
 						processesComponents = {
-							"Request::Tag",
+							"Resource::Manager::Request::Tag",
 							"Request::LoadResource"
 						},
 						removesComponents = {
