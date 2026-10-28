@@ -3,9 +3,9 @@
 #include <regex>
 #include <filesystem>
 
-#include <Common.Types.hpp>
-#include <OS.Assert.hpp>
-#include <OS.FileSystem.BinaryFile.hpp>
+#include <Common/Common.Types.hpp>
+#include <Common/OS/OS.Assert.hpp>
+#include <Common/OS/OS.FileSystem.BinaryFile.hpp>
 
 #include <Resource/auto_Resource.Module.hpp>
 

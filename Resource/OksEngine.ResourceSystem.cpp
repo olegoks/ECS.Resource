@@ -7,7 +7,7 @@
 
 #include <Config/auto_OksEngine.Config.Module.hpp>
 
-#include <Lua.Context.hpp>
+#include <Common/Lua/Lua.Context.hpp>
 
 namespace Resource
 {
